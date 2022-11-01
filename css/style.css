@@ -1,0 +1,104 @@
+.background {
+    width:100% ;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+.cmetery {
+    z-index: 1;
+}
+.cemetery-image {
+    width: 100%;
+    height: 100%;
+}
+.moon {
+    position: absolute; 
+    z-index: 2;
+    top: -35px;
+    left: -35px;
+    width: 200px;
+    height: 200px;
+    animation-name:moon;
+    animation-duration: 30s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.zombie {
+    position: absolute;
+    left: 0px;
+    bottom: 0.4%;
+    z-index: 2;
+    transform:scaleX(-50%) scaleY(50%) rotate(20deg);
+    animation-name:zombie;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+}
+
+.blackbirds {
+    position: absolute;
+    top: -51px;
+    right:70px ;
+    width:500px ;
+    height:400px ;
+    z-index: 3;
+    animation: birds 25s infinite;
+}
+.handd{
+    position: absolute;
+    left: 285px;
+    bottom: 230px;
+    width: 90px;
+    height:90px ;
+    transform-origin: bottom;
+    animation: hand 5s infinite;
+}
+.halloween-ghost {
+    position: absolute;
+    top:180px ;
+    right:90px ;
+    width:400px ;
+    height:300px ;
+    opacity: 0.56;
+    animation: ghost 5s infinite;
+}
+/*
+.main2:hover {
+    transform:rotate(25deg)
+}*/
+
+/*@keyframes*/
+
+@keyframes zombie {
+    0%{
+        left: -30%;
+        transform:scaleX(-50%) scaleY(50%) rotate(0deg)
+    } 
+    20%{transform:scaleX(-50%) scaleY(50%) rotate(30deg) ;}
+    40%{transform:scaleX(-50%) scaleY(50%) rotate(-30deg) ;}
+    60%{transform:scaleX(-50%) scaleY(50%) rotate(30deg) ;}
+    80%{transform:scaleX(-50%) scaleY(50%) rotate(-30deg) ;}
+
+
+
+    100% {left: 100%;transform:scaleX(-50%) scaleY(50%) rotate(0deg)}
+}
+@keyframes moon {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+
+}
+@keyframes birds {
+    from {right: -100%;}
+    to {right: 100%;}
+}
+@keyframes hand {
+0%{transform: rotate(-20deg);}
+50%{transform: rotate(20deg);}
+100%{transform: rotate(-20deg);}
+}
+@keyframes ghost  {
+ 0%{transform: translateY(-20px);}
+50%{transform: translateY(20px);}
+100%{transform: translateY(-20px);}
+}
